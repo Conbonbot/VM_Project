@@ -13,9 +13,9 @@ gem 'redis', '~> 4.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'sqlite3', '~> 1.4', '>= 1.4.2'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.13'
   gem 'byebug',  '9.0.6', platform: :mri
 end
 
@@ -30,6 +30,8 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'minitest', '~> 5.8', '>= 5.8.4'
+  gem 'minitest-reporters'
 end
 
 group :production do
