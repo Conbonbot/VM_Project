@@ -13,6 +13,7 @@ gem 'redis', '~> 4.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'rubocop'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4', '>= 1.4.2'
