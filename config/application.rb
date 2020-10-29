@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module VmProject
   class Application < Rails::Application
+    config.assets.paths << Rails.root.join("vendor", "assets", "css", "device-mockups", "img", "startbootstrap-new-age", "vendor")
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 

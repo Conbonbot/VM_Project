@@ -14,6 +14,11 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rubocop'
+gem 'jquery-rails'
+gem 'bootstrap-sass'
+gem 'jquery-ui-rails'
+gem 'sprockets-rails'
+gem 'webpack'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4', '>= 1.4.2'
