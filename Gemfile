@@ -19,6 +19,7 @@ gem 'bootstrap-sass'
 gem 'jquery-ui-rails'
 gem 'sprockets-rails'
 gem 'webpack'
+gem 'simple_form'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4', '>= 1.4.2'

@@ -1,0 +1,87 @@
+<% provide(:title, "Home")%>
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <style>
+        div.container.text-left{
+            padding-left: 30% !important;
+            padding-right: 30% !important
+        }
+        
+
+    </style>
+
+    </head>
+
+    <body id="page-top">
+
+        <header class="masthead text-center">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-lg-7 my-auto">
+                        <div class="header-content mx-auto">
+                            <h1 class="mb-5">Welcome to Project Stardust!</h1>
+                            <a href="#signup" class="btn btn-outline btn-xl js-scroll-trigger">Create an account!</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 my-auto">
+                        <div class="header-content mx-auto">
+                            <h2 class="mb-5">This is Project Stardust, a way for students to harness the RAW POWAH of the server</h2>
+                            <h2 class="mb-5">Eh bruh add more text to this, it makes the template look better</h2>
+                        </div>
+                    </div>
+                </div>
+          </div>
+        </header>
+
+        <section class="download bg-primary text-center" id="signup">
+            <div class="container text-center">
+                <h2 class="mb-4">Sign up</h2>
+                <br>
+                <hr>
+                <div class="row" id="inputs">
+                    <div class="container text-left">
+                        <%= simple_form_for @user do |f| %>
+                            <%= render 'shared/error_messages' %>
+                                <%= f.label :name, "Name" %>
+                                <%= f.text_field :name, class: 'form-control' %>
+
+                                <%= f.label :username, "Username" %>
+                                <%= f.text_field :username, class: 'form-control' %>
+
+                                <%= f.label :email, "Email (Do NOT use your student email)" %>
+                                <%= f.email_field :email, class: 'form-control' %>
+
+                                <%= f.label :student_id, "Student ID (6-digit)" %> 
+                                <%= f.text_field :student_id, class: 'form-control'  %>
+
+                                <%= f.label :password, "Password (At least 6 characters)"%>
+                                <%= f.password_field :password, class: 'form-control' %>
+                        
+                                <%= f.label :password_confirmation, "Password Confirmation" %>
+                                <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+                    </div>
+                </div>
+                <br>
+                <%= f.button :submit, 'Create Account', class: 'btn btn-success' %>
+
+                <% end %>
+            </div>
+        </section>
+
+    </body>
+
+</html>
