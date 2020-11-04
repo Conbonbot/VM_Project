@@ -1,0 +1,86 @@
+{
+  "_from": "startbootstrap-creative",
+  "_id": "startbootstrap-creative@6.0.4",
+  "_inBundle": false,
+  "_integrity": "sha512-9UWGMAjw8Lt2edRhxDmUtk8mU1mtFoYXb4D+YkvAAvjmKJfqAujpZebuTvwpF3Oe+hqqZ/X6Sx59+5tnloHqGg==",
+  "_location": "/startbootstrap-creative",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "startbootstrap-creative",
+    "name": "startbootstrap-creative",
+    "escapedName": "startbootstrap-creative",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/startbootstrap-creative/-/startbootstrap-creative-6.0.4.tgz",
+  "_shasum": "5633b22d3ee66b2bc315997bfb2a55709cf30c01",
+  "_spec": "startbootstrap-creative",
+  "_where": "/mnt/c/Users/Connor/Desktop/VM_Project/vm_project",
+  "author": {
+    "name": "Start Bootstrap"
+  },
+  "bugs": {
+    "url": "https://github.com/StartBootstrap/startbootstrap-creative/issues",
+    "email": "feedback@startbootstrap.com"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "David Miller",
+      "url": "https://davidmiller.io/"
+    }
+  ],
+  "dependencies": {
+    "bootstrap": "4.5.3"
+  },
+  "deprecated": false,
+  "description": "Creative is a stylish one page HTML theme built with Bootstrap.",
+  "devDependencies": {
+    "autoprefixer": "10.0.1",
+    "browser-sync": "2.26.13",
+    "chokidar": "3.4.3",
+    "concurrently": "5.3.0",
+    "postcss": "8.1.4",
+    "prettier": "2.1.2",
+    "pug": "3.0.0",
+    "sass": "1.28.0",
+    "shelljs": "0.8.4",
+    "upath": "2.0.0"
+  },
+  "homepage": "https://startbootstrap.com/theme/creative",
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "html",
+    "pug",
+    "responsive",
+    "theme",
+    "template"
+  ],
+  "license": "MIT",
+  "name": "startbootstrap-creative",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StartBootstrap/startbootstrap-creative.git"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
+    "build:assets": "node scripts/build-assets.js",
+    "build:pug": "node scripts/build-pug.js",
+    "build:scripts": "node scripts/build-scripts.js",
+    "build:scss": "node scripts/build-scss.js",
+    "clean": "node scripts/clean.js",
+    "start": "npm run build && node scripts/start.js",
+    "start:debug": "npm run build && node scripts/start-debug.js"
+  },
+  "title": "Creative",
+  "version": "6.0.4"
+}

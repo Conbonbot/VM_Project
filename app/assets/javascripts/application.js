@@ -19,6 +19,7 @@
 //= require_tree .
 //= require jquery/jquery
 //= require bootstrap/js/bootstrap
+//= require bootstrap/js/bootstrap.bundle
 //= require jquery-easing/jquery.easing
 //= require new-age
 //= require dropdown
