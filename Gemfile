@@ -20,6 +20,7 @@ gem 'jquery-ui-rails'
 gem 'sprockets-rails'
 gem 'webpack'
 gem 'simple_form'
+gem 'rails-controller-testing'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4', '>= 1.4.2'

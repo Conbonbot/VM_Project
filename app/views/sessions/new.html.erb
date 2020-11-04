@@ -1,0 +1,60 @@
+<% provide(:title, "User Log in") %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <style>
+        div.row{
+        padding-left: 30% !important;
+        padding-right: 30% !important;  
+        }
+    </style>
+
+
+  </head>
+  <body id="page-top">
+
+    <section class="download bg-primary text-center" id="login">
+            <div class="container text-center">
+                <h2 class="mb-4">Log In</h2>
+                <br>
+                <hr>
+                <div class="row" id="inputs">
+                    <div class="container text-left">
+                        <%= form_for(:session, url: login_path) do |f| %>
+          
+                            <%= f.label :username, "Username" %>
+                            <%= f.text_field :username, class: 'form-control' %>
+                    
+                            <%= f.label :password %>
+                            <%= link_to "(forgot password WIP)", '#' %>
+                            <%= f.password_field :password, class: 'form-control' %>
+                    
+                            <%= f.label :remember_me, class: "checkbox inline" do %>
+                            <%= f.check_box :remember_me %>
+                            <span>Remember me on this device</span>
+                            <% end %>
+                            <br>
+                            <%= f.submit "Log in", class: 'btn btn-primary' %>
+                        <% end %>
+                            
+                    </div>
+                </div>
+                <br>
+                
+                <br>
+                <p>New user? <%= link_to "Sign up now!", root_path %></p>
+            </div>
+        </section>  
+    
+  
+  </body>
+</html>
