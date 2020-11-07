@@ -1,6 +1,8 @@
 class User < ApplicationRecord
+    before_action :logged_in_user, only [:index, :edit, :update, :destroy]
     attr_accessor :remember_token
     before_save :downcase_email
+    has_many :vms, dependent: :destroy
     validates :name, presence: true, length: { maximum: 50}
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :email, length: { maximum: 255}, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
@@ -41,8 +43,16 @@ class User < ApplicationRecord
 
     private
     
-    # Converts an email to all lower-case
+    # Converts an email to all lowercase
     def downcase_email
         self.email = email.downcase
     end
+
+    # Before Filters
+
+    def correct_user
+        @user = User.find_by(params[:id])
+        redirect_to root_url unless current_user?(@user)
+    end
+
 end
