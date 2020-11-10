@@ -1,13 +1,19 @@
-class VMsController < ApplicationController
+class VmsController < ApplicationController
     before_action :logged_in_user, only: [:create, :destroy]
 
+    def new
+        @vm = Vm.new
+    end
+
     def create
-        @vm = current_user.vm.build(vm_params)
+        @vm = current_user.vms.build(vm_params)
+        debugger
         if @vm.save
             flash[:success] = "Virtual Machine created!"
             redirect_to current_user
         else
             render 'vm/new'
+        end
     end
 
     def destroy
@@ -16,6 +22,6 @@ class VMsController < ApplicationController
     private
 
     def vm_params
-        params.require(:vm).permit(:type, :vm_name)
+        params.require(:vm).permit(:vm_type, :vm_name)
     end
 end

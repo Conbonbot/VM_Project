@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    before_action :logged_in_user, only [:index, :edit, :update, :destroy]
+    
     attr_accessor :remember_token
     before_save :downcase_email
     has_many :vms, dependent: :destroy
@@ -48,11 +48,6 @@ class User < ApplicationRecord
         self.email = email.downcase
     end
 
-    # Before Filters
-
-    def correct_user
-        @user = User.find_by(params[:id])
-        redirect_to root_url unless current_user?(@user)
-    end
+    
 
 end
