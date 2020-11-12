@@ -1,0 +1,7 @@
+Project Stardust
+
+Welcome to Project Stardust <%= @user.name %>,
+
+Click on the link below to activate your account, and harness the power of the server!
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
