@@ -7,6 +7,7 @@ class VmsController < ApplicationController
 
     def create
         @vm = current_user.vms.build(vm_params)
+        @vm.update_attribute(:username, current_user.username)
         debugger
         if @vm.save
             flash[:success] = "Virtual Machine created!"

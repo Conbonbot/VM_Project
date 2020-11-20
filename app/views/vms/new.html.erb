@@ -41,7 +41,7 @@
                                 <%= f.text_field :vm_name, class: 'form-control' %>
 
                                 <%= f.label :vm_tyoe, "VM Type" %>
-                                <%= f.input_field :vm_type, :collection => %w[Buffet AP Buffet(Unity)], class: 'form-control' %>
+                                <%= f.input_field :vm_type, :collection => %w[Ubuntu(GUI) Windows Ubuntu(CMD)], class: 'form-control' %>
 
                             <%= f.button :submit, 'Create VM', class: 'btn btn-success'%>
                         <% end %>
